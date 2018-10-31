@@ -42,7 +42,6 @@ int words_advanced(char const * s) {
     while (i + 16 < len) {
         uint64_t res[2];//результат compare, 2 по 8 байт
         compare(s + i, spaces, res);
-        //cout << res[0] << " " << res[1] << " RES HERE "<< endl;
         for (int j = 0; j < 2; j++) {
             for (int k = 0; k < 8; k++) {
                 int cur = res[j] % 2;
